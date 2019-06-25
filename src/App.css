@@ -1,0 +1,59 @@
+.App {
+  --gap-size: 1.5em;
+  background-color: #fafafa;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "upload"
+    "download";
+
+  grid-row-gap: var(--gap-size);
+  padding: var(--gap-size);
+}
+
+.Upload-Empty {
+  grid-area: upload;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "Upload-Content-Wrapper";
+}
+.Upload-Filled {
+  position: relative;
+}
+
+.Upload-Actions {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.Upload-Content-Wrapper {
+  grid-area: Upload-Content-Wrapper;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "Upload-Content";
+  margin: 0;
+}
+
+.Upload-Content {
+  grid-area: Upload-Content;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Download {
+  grid-area: download;
+}
+
+.Upsize {
+  height: 100%;
+  width: 100%;
+}
